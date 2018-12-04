@@ -1,0 +1,63 @@
+			Java Script Assignments
+Assignment 1: 
+*Create a simple page that lets users type in some temperature value in the Fahrenheit scale and when the user clicks a “Show results” button, to show the temperature in Celsius scale. For example, if the user types in 32, your results should show “0 degree Celsius.”
+Functionality
+*At the least, your program should allow for the following
+*User Input: One text field where the user will type in the temperature in Fahrenheit
+*Input Validation: When the “Show results” button is clicked, your program should check to see if the user has left the text field empty and also if what the user typed is a number and not anything else.
+*If there are problems (as in II. above) then your program should show appropriate error messages
+*Display results: If there are no errors and user input is valid, then your program should show the results to the user
+
+-->	<html>
+	<body>
+	<script>
+	function fun(){
+	var a = document.getElementById("demo").value;
+	if(!isNaN(a))
+	{
+	a = (a-32)*5/9;
+	document.write(a);
+	document.write("  in Fahrenheit");
+	}
+	else
+	{
+	document.write("Please enter a number");
+	}
+	}
+	</script>
+	Enter a value:<input type="text" id="demo"><br>
+	<input type="submit" value="show results" onclick="fun()">
+	</body>
+	</html>
+
+Assignment 2:
+Write a script which uses a prompt box to get an input. Validate that the input is an Integer between 1 and 30, and then print to the page asterisks (*) to represent the number. Your script must run until you have collected 3 valid inputs as well as generate 3 outputs (one output on one line).
+Example:
+Input: 4
+Input: 6
+Input: 12
+****
+******
+************
+
+--> 	<html>
+	<body>
+	<script>
+		var a = prompt("enter a number");
+		for(var n=1;n<=a;n++)
+		{
+		document.write("*");
+		}document.write('<br>');
+		var a = prompt("enter a number");
+		for(var n=1;n<=a;n++)
+	{
+	document.write("*");
+	}document.write('<br>');
+	var a = prompt("enter a number");
+	for(var n=1;n<=a;n++)
+	{
+	document.write("*");
+	}
+	</script>
+	</body>
+	</html>
